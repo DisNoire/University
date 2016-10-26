@@ -16,7 +16,7 @@ public class ManualRepeatingRifle extends Flintlock {
     }
 
     @Override
-    protected Object clone(){
+    protected ManualRepeatingRifle clone(){
         return new ManualRepeatingRifle(this.accuracy);
     }
 }

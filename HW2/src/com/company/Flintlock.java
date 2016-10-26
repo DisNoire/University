@@ -40,7 +40,7 @@ public class Flintlock {
     }
 
     @Override
-    protected Object clone(){
+    protected Flintlock clone(){
         return new Flintlock(this.accuracy);
     }
 }

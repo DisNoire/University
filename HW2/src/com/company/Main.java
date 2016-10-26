@@ -37,17 +37,28 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         while(!op.equals("end")) {
             op = scanner.next();
-            if(op.equals("add")) {
-
+            if(op.equals("shoot")) {
+                flintlock.shoot();
             }
-            if(op.equals("get")) {
-
+            if(op.equals("clear")) {
+                flintlock.clear();
             }
-            if(op.equals("remove")) {
-
+            if(op.equals("reload")) {
+                flintlock.reload();
+            }
+            if(op.equals("text")) {
+                System.out.println(flintlock.toString());
+            }
+            if(op.equals("hash")) {
+                System.out.println(flintlock.hashCode());
+            }
+            if(op.equals("clone")) {
+                Flintlock flintlock1 = flintlock.clone();
+                if(scanner.next().equals("equals")) {
+                    System.out.println(flintlock1.equals(flintlock));
+                }
             }
         }
-
     }
 
     public static void activitiesForPlanes(Plane plane) {
@@ -55,14 +66,20 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         while(!op.equals("end")) {
             op = scanner.next();
-            if(op.equals("add")) {
-
+            if(op.equals("attack")) {
+                plane.attack();
             }
-            if(op.equals("get")) {
-
+            if(op.equals("text")) {
+                System.out.println(plane.toString());
             }
-            if(op.equals("remove")) {
-
+            if(op.equals("hash")) {
+                System.out.println(plane.hashCode());
+            }
+            if(op.equals("clone")) {
+                Plane plane1 = plane.clone();
+                if(scanner.next().equals("equals")) {
+                    System.out.println(plane1.equals(plane));
+                }
             }
         }
 

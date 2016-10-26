@@ -4,7 +4,7 @@ package com.company;
  * Created by ENOT on 23.10.2016.
  */
 public class Plane {
-    int amountOfBullets = 0;
+    int amountOfBullets = 1000;
     int maxVelocity;
     String name;
 
@@ -35,7 +35,7 @@ public class Plane {
     }
 
     @Override
-    protected Object clone(){
+    protected Plane clone(){
         return new Plane(this.name,this.maxVelocity);
     }
 }
